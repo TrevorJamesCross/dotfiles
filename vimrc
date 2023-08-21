@@ -1,0 +1,85 @@
+" disable vi compatibility
+set nocompatible
+
+" turn on syntax highlighting.
+syntax on
+
+" show matching brackets
+set showmatch
+
+" disable default vim startup message.
+set shortmess+=I
+
+" show line numbers and show location in file
+set number
+set ruler
+
+" set color scheme
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast='hard'
+
+" set airline color scheme
+let g:airline_theme='gruvbox'
+
+" set vertical line position
+set colorcolumn=90
+highlight colorcolumn ctermbg=DarkGrey
+
+" fix backspace
+set backspace=indent,eol,start
+
+" config tabs
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+set autoindent
+set smarttab
+
+" remove hidden protection
+set hidden
+
+" set search to initially ignore casing unless capital letters are in the
+" search and make searching incremental
+set ignorecase
+set smartcase
+set incsearch
+
+" unbind some useless/annoying default key bindings.
+nmap Q <Nop>
+
+" disable audible bell
+set noerrorbells visualbell t_vb=
+
+" enable mouse support
+set mouse+=a
+
+" remap <ESC> to jk
+inoremap jk <ESC>
+
+" configure ale (linting plugin)
+let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_python_flake8_executable = 'flake8'
+let g:ale_python_flake8_options = '--max-line-length=1000'
+let g:ale_python_pylint_executable = 'pylint'
+let g:ale_virtualtext_cursor = 'disabled'
+let g:ale_warn_about_trailing_whitespace = 0
+let g:ale_warn_about_trailing_blank_lines = 0
+let g:ale_linters = {'python': ['flake8', 'pylint']}
+let g:ale_linters_ignore = {'python': ['pylint']}
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_sign_column_always = 1
+
+" disable arrow keys in normal and insert modes
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+
+inoremap <Left>  <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up>    <ESC>:echoe "Use k"<CR>
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
