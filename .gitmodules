@@ -1,0 +1,24 @@
+[submodule "vim/pack/vendor/start/ale"]
+	path = vim/pack/vendor/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/pack/vendor/start/autoflake.vim"]
+	path = vim/pack/vendor/start/autoflake.vim
+	url = https://github.com/tenfyzhong/autoflake.vim.git
+[submodule "vim/pack/vendor/start/gruvbox"]
+	path = vim/pack/vendor/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "vim/pack/vendor/start/indentLine"]
+	path = vim/pack/vendor/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "vim/pack/vendor/start/supertab"]
+	path = vim/pack/vendor/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim/pack/vendor/start/vim-airline"]
+	path = vim/pack/vendor/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/vendor/start/vim-bufferline"]
+	path = vim/pack/vendor/start/vim-bufferline
+	url = https://github.com/bling/vim-bufferline.git
+[submodule "vim/pack/vendor/start/vim-flake8"]
+	path = vim/pack/vendor/start/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
