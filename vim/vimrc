@@ -90,4 +90,4 @@ nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
 " map command to comment out block of code
-vnoremap <leader>c :s/^\(#\)\?/\=empty(submatch(1)) ? '#' : ''/g<CR>
+vnoremap <leader>c :s/^\(#\)\?/\=empty(submatch(1)) ? '# ' : ''/g<CR>
