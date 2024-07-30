@@ -1,24 +1,27 @@
-[submodule "vim/pack/vendor/start/ale"]
-	path = vim/pack/vendor/start/ale
-	url = https://github.com/dense-analysis/ale.git
-[submodule "vim/pack/vendor/start/autoflake.vim"]
-	path = vim/pack/vendor/start/autoflake.vim
-	url = https://github.com/tenfyzhong/autoflake.vim.git
-[submodule "vim/pack/vendor/start/gruvbox"]
-	path = vim/pack/vendor/start/gruvbox
+[submodule "vim/start/gruvbox"]
+	path = vim/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "vim/pack/vendor/start/indentLine"]
-	path = vim/pack/vendor/start/indentLine
+[submodule "vim/start/ale"]
+	path = vim/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/start/indentLine"]
+	path = vim/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "vim/pack/vendor/start/supertab"]
-	path = vim/pack/vendor/start/supertab
+[submodule "vim/start/rust.vim"]
+	path = vim/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/start/supertab"]
+	path = vim/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/pack/vendor/start/vim-airline"]
-	path = vim/pack/vendor/start/vim-airline
+[submodule "vim/start/vim-airline"]
+	path = vim/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim/pack/vendor/start/vim-bufferline"]
-	path = vim/pack/vendor/start/vim-bufferline
+[submodule "vim/start/vim-bufferline"]
+	path = vim/start/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
-[submodule "vim/pack/vendor/start/vim-flake8"]
-	path = vim/pack/vendor/start/vim-flake8
+[submodule "vim/start/vim-cargo"]
+	path = vim/start/vim-cargo
+	url = https://github.com/timonv/vim-cargo.git
+[submodule "vim/start/vim-flake8"]
+	path = vim/start/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git

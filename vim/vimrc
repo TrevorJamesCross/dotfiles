@@ -4,8 +4,12 @@ let mapleader='\'
 " disable vi compatibility
 set nocompatible
 
+" set custom runtime path
+set runtimepath+=/home/$USER/.vim/start/*
+
 " turn on syntax highlighting.
 syntax on
+filetype plugin indent on
 
 " show matching brackets
 set showmatch
@@ -20,7 +24,7 @@ set ruler
 " set color scheme
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast='hard'
+let g:gruvbox_contrast_dark='hard'
 
 " set airline color scheme
 let g:airline_theme='gruvbox'
