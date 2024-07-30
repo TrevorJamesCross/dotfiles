@@ -25,3 +25,6 @@
 [submodule "vim/start/vim-flake8"]
 	path = vim/start/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
+[submodule "vim/start/vim-json"]
+	path = vim/start/vim-json
+	url = https://github.com/elzr/vim-json.git

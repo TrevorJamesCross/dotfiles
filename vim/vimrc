@@ -66,7 +66,7 @@ set mouse+=a
 inoremap jk <ESC>
 
 " remove conceal for JSON files
-let g:vim_json_conceal=0
+let g:vim_json_syntax_conceal=0
 
 " configure ale (linting plugin)
 let g:ale_completion_enabled = 1
