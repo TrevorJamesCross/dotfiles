@@ -34,3 +34,15 @@
 [submodule "vim/start/vim-pydocstring"]
 	path = vim/start/vim-pydocstring
 	url = https://github.com/heavenshell/vim-pydocstring.git
+[submodule "vim/start/vim-airline-themes"]
+	path = vim/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/start/vim-signify"]
+	path = vim/start/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
+[submodule "vim/start/Fox.vim"]
+	path = vim/start/Fox.vim
+	url = https://github.com/Pougher/Fox.vim.git
+[submodule "vim/start/vim-deus"]
+	path = vim/start/vim-deus
+	url = https://github.com/ajmwagar/vim-deus.git

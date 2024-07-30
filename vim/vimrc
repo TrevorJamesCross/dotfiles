@@ -25,12 +25,11 @@ set number
 set ruler
 
 " set color scheme
-colorscheme gruvbox
+colorscheme deus
 set background=dark
-let g:gruvbox_contrast_dark='hard'
 
 " set airline color scheme
-let g:airline_theme='gruvbox'
+let g:airline_theme='deus'
 let g:airline_powerline_fonts=1
 
 " set vertical line position
