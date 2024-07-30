@@ -28,3 +28,9 @@
 [submodule "vim/start/vim-json"]
 	path = vim/start/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "vim/start/csv.vim"]
+	path = vim/start/csv.vim
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "vim/start/vim-pydocstring"]
+	path = vim/start/vim-pydocstring
+	url = https://github.com/heavenshell/vim-pydocstring.git

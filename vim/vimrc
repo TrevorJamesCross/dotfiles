@@ -11,6 +11,9 @@ set runtimepath+=/home/$USER/.vim/start/*
 syntax on
 filetype plugin indent on
 
+" disable stupid automatic commenting feature
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " show matching brackets
 set showmatch
 
@@ -28,6 +31,7 @@ let g:gruvbox_contrast_dark='hard'
 
 " set airline color scheme
 let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts=1
 
 " set vertical line position
 set colorcolumn=90
