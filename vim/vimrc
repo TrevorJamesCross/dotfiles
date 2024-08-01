@@ -96,5 +96,8 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
-" map command to comment out block of code
-vnoremap <leader>c :s/^\(# \)\?/\=empty(submatch(1)) ? '# ' : ''/g<CR>
+" map command to comment out block of code for Python
+autocmd FileType python vnoremap <leader>c :s@^\(# \)\?@\=empty(submatch(1)) ? '# ' : ''@g<CR>
+
+" map command to comment out block of code for Rust
+autocmd FileType rust vnoremap <leader>c :s@^\(// \)\?@\=empty(submatch(1)) ? '// ' : ''@g<CR>
