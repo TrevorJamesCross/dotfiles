@@ -7,9 +7,10 @@ set nocompatible
 " set custom runtime path
 set runtimepath+=/home/$USER/.vim/start/*
 
-" turn on syntax highlighting.
-syntax on
+" turn on syntax highlighting & enable filetype detection
+filetype plugin on
 filetype plugin indent on
+syntax on
 
 " disable stupid automatic commenting feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
