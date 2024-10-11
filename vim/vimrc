@@ -105,3 +105,6 @@ autocmd FileType python vnoremap <leader>c :s@^\(# \)\?@\=empty(submatch(1)) ? '
 
 " map command to comment out block of code for Rust
 autocmd FileType rust vnoremap <leader>c :s@^\(// \)\?@\=empty(submatch(1)) ? '// ' : ''@g<CR>
+
+" allow Vim to recognize DVC-generated files as YAML
+autocmd! BufNewFile,BufRead Dvcfile,*.dvc,dvc.lock setfiletype yaml
