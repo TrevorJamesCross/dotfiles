@@ -46,3 +46,9 @@
 [submodule "vim/start/vim-deus"]
 	path = vim/start/vim-deus
 	url = https://github.com/ajmwagar/vim-deus.git
+[submodule "vim/start/quarto-vim"]
+	path = vim/start/quarto-vim
+	url = https://github.com/quarto-dev/quarto-vim.git
+[submodule "vim/start/vim-pandoc-syntax"]
+	path = vim/start/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
