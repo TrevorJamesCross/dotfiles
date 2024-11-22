@@ -72,24 +72,21 @@ inoremap jk <ESC>
 " remove conceal for JSON files
 let g:vim_json_syntax_conceal=0
 
-" configure ale (linting plugin)
+" configure ale with flake8-Black pip package
 let g:ale_completion_enabled = 1
 let g:ale_lint_on_text_changed = 'always'
 let g:ale_python_flake8_executable = 'flake8'
-let g:ale_python_flake8_options = '--max-line-length=1000'
-let g:ale_python_pylint_executable = 'pylint'
+let g:ale_python_flake8_options = '--max-line-length=88'
 let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_warn_about_trailing_whitespace = 0
 let g:ale_warn_about_trailing_blank_lines = 0
-let g:ale_linters = {'python': ['flake8', 'pylint']}
-let g:ale_linters_ignore = {'python': ['pylint']}
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['black']}
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 let g:ale_sign_column_always = 1
 
 " customize linting
 let g:flake8_show_in_gutter=1
-autocmd BufWritePost *.py call flake8#Flake8()
 
 " disable arrow keys in normal and insert modes
 nnoremap <Left>  :echoe "Use h"<CR>
