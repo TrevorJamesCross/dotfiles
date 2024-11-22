@@ -34,7 +34,7 @@ let g:airline_theme='deus'
 let g:airline_powerline_fonts=1
 
 " set vertical line position & soft-wrapping behaviour
-set colorcolumn=80
+set colorcolumn=88
 highlight colorcolumn ctermbg=DarkGrey
 
 " fix backspace
