@@ -7,9 +7,6 @@
 [submodule "vim/start/indentLine"]
 	path = vim/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "vim/start/rust.vim"]
-	path = vim/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule "vim/start/supertab"]
 	path = vim/start/supertab
 	url = https://github.com/ervandew/supertab.git
@@ -19,9 +16,6 @@
 [submodule "vim/start/vim-bufferline"]
 	path = vim/start/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
-[submodule "vim/start/vim-cargo"]
-	path = vim/start/vim-cargo
-	url = https://github.com/timonv/vim-cargo.git
 [submodule "vim/start/vim-flake8"]
 	path = vim/start/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
@@ -52,3 +46,6 @@
 [submodule "vim/start/vim-pandoc-syntax"]
 	path = vim/start/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "vim/start/Dockerfile.vim"]
+	path = vim/start/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git

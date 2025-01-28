@@ -119,4 +119,3 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # set cargo env path
-. "$HOME/.cargo/env"

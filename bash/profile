@@ -27,4 +27,3 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # execute env file in user's .cargo dir; adds /.cargo/bin to PATH
-. "$HOME/.cargo/env"
