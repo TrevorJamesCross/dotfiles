@@ -1,6 +1,8 @@
-#!usr/bin/bash
+#!/usr/bin/bash
 
-# script to automate linking dotfiles after repo is cloned
+# script to automate linking dotfiles after repo is cloned. Use the command:
+# git clone https://github.com/TrevorJamesCross/dotfiles.git --recurse-submodules
+# to clone the repo and submodules
 
 # define directory paths
 HOME_DIR="$HOME"
