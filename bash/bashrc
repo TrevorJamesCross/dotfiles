@@ -85,6 +85,8 @@ else
     && sudo apt autoclean -y \
     && sudo apt clean -y'
 
+    alias docker_update_images='sudo docker images --format {{.Repository}}:{{.Tag}} | xargs -L1 sudo docker pull'
+
 fi
 
 # export environment variables.
