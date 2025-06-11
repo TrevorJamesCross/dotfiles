@@ -2,4 +2,4 @@
 	email = tjcross.work@gmail.com
 	name = TrevorJamesCross
 [init]
-	defaultBranch = prod
+	defaultBranch = main
