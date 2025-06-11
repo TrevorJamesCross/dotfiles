@@ -90,8 +90,8 @@ else
 fi
 
 # export environment variables.
-if [ -f ~/.bash_env_vars ]; then
-    . ~/.bash_env_vars
+if [ -f ~/.env ]; then
+    . ~/.env
 fi
 
 # enable programmable completion features (you don't need to enable
