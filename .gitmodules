@@ -43,9 +43,6 @@
 [submodule "vim/start/vim-terraform"]
 	path = vim/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
-[submodule "vim/start/everforest"]
-	path = vim/start/everforest
-	url = https://github.com/sainnhe/everforest.git
 [submodule "vim/start/vim-rainbow"]
 	path = vim/start/vim-rainbow
 	url = https://github.com/frazrepo/vim-rainbow.git
@@ -58,3 +55,6 @@
 [submodule "vim/start/vim-surround"]
 	path = vim/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/start/everforest"]
+	path = vim/start/everforest
+	url = https://github.com/sainnhe/everforest.git
