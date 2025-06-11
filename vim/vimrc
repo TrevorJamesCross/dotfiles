@@ -12,6 +12,11 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
+" enable true color support for better themes
+if has('termguicolors')
+    set termguicolors
+endif
+
 " disable stupid automatic commenting feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -25,17 +30,40 @@ set shortmess+=I
 set number
 set ruler
 
-" set color scheme
-colorscheme deus
+" add relative line numbers for easier navigation
+set relativenumber
+
+" configure Everforest theme
+" Important: this configuration option should be placed before colorscheme everforest
+if has('termguicolors')
+    set termguicolors
+endif
+
+" Set the background option before applying colorscheme
 set background=dark
 
-" set airline color scheme
-let g:airline_theme='deus'
+" Configure Everforest options
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+let g:everforest_enable_italic = 1
+let g:everforest_diagnostic_text_highlight = 1
+let g:everforest_diagnostic_line_highlight = 1
+let g:everforest_sign_column_background = 'none'
+
+" set color scheme
+colorscheme everforest
+
+" enhanced airline configuration
+let g:airline_theme='everforest'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
 " set vertical line position & soft-wrapping behaviour
 set colorcolumn=88
-highlight colorcolumn ctermbg=DarkGrey
+" Let Everforest handle the colorcolumn color"
 
 " fix backspace
 set backspace=indent,eol,start
@@ -51,20 +79,41 @@ set smarttab
 " remove hidden protection
 set hidden
 
-" set search to initially ignore casing unless capital letters are in the
-" search and make searching incremental
+" enhanced search settings
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
+
+" smooth scrolling and cursor positioning
+set scrolloff=8
+set sidescrolloff=8
+
+" better split behavior
+set splitbelow
+set splitright
+
+" configure indentLine for visual indent guides
+let g:indentLine_enabled = 1
+let g:indentLine_char = '│'
+let g:indentLine_color_term = 243
+let g:indentLine_faster = 1
 
 " unbind some useless/annoying default key bindings.
 nmap Q <Nop>
+
+" clear search highlighting with <leader>/
+nnoremap <leader>/ :nohlsearch<CR>
 
 " disable audible bell
 set noerrorbells visualbell t_vb=
 
 " enable mouse support
 set mouse+=a
+
+" enhanced cursor line highlighting
+set cursorline
+hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
 
 " remap <ESC> to jk
 inoremap jk <ESC>
@@ -89,8 +138,62 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 
+" customize ale signs for better visibility
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+
 " customize linting
 let g:flake8_show_in_gutter=1
+
+" enhanced git signify configuration
+let g:signify_sign_add = '+'
+let g:signify_sign_delete = '-'
+let g:signify_sign_delete_first_line = '-'
+let g:signify_sign_change = '~'
+
+" configure rainbow parentheses
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\   'guifgs': ['#d65d0e', '#458588', '#b16286', '#689d6a', '#d79921'],
+\   'ctermfgs': ['brown', 'blue', 'magenta', 'green', 'yellow'],
+\   'guis': [''],
+\   'cterms': [''],
+\   'operators': '_,_',
+\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\   'separately': {
+\       'python': {
+\           'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\       },
+\       'terraform': {
+\           'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\       },
+\   }
+\}
+
+" configure vim-illuminate
+let g:Illuminate_delay = 250
+let g:Illuminate_highlightUnderCursor = 0
+let g:Illuminate_ftblacklist = ['nerdtree', 'vim-plug']
+augroup illuminate_augroup
+    autocmd!
+    autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
+augroup END
+
+" configure auto-pairs
+let g:AutoPairsShortcutToggle = '<M-p>'
+let g:AutoPairsShortcutFastWrap = '<M-e>'
+let g:AutoPairsShortcutJump = '<M-n>'
+let g:AutoPairsMapCR = 1
+let g:AutoPairsMapSpace = 1
+let g:AutoPairsMultilineClose = 1
+let g:AutoPairsFlyMode = 0
+
+" vim-surround configuration (uses default keybindings)
+" cs"' - change surrounding " to '
+" ds" - delete surrounding "
+" ysiw" - surround word with "
+" yss) - surround entire line with ()
+" S" in visual mode - surround selection with "
 
 " disable arrow keys in normal and insert modes
 nnoremap <Left>  :echoe "Use h"<CR>
@@ -98,8 +201,35 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
+" better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " map command to comment out block of code for Python
 autocmd FileType python vnoremap <leader>c :s@^\(# \)\?@\=empty(submatch(1)) ? '# ' : ''@g<CR>
 
 " allow Vim to recognize DVC-generated files as YAML
 autocmd! BufNewFile,BufRead Dvcfile,*.dvc,dvc.lock setfiletype yaml
+
+" enhanced file type specific settings
+autocmd FileType python setlocal colorcolumn=88
+autocmd FileType terraform setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2
+
+" better folding
+set foldmethod=indent
+set foldlevel=99
+
+" enable folding with spacebar
+nnoremap <space> za
+
+" show whitespace characters
+set list
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+
+" better command completion
+set wildmenu
+set wildmode=longest:full,full
