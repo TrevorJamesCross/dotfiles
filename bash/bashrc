@@ -85,7 +85,9 @@ else
     && sudo apt autoclean -y \
     && sudo apt clean -y'
 
-    alias docker_update_images='sudo docker images --format {{.Repository}}:{{.Tag}} | xargs -L1 sudo docker pull'
+    alias update-images='sudo docker images --format {{.Repository}}:{{.Tag}} | xargs -L1 sudo docker pull'
+
+    alias debug-media='ssh -L 8080:localhost:8080 -L 7878:localhost:7878 -L 8989:localhost:8989 -L 6767:localhost:6767 -N mediaserver'
 
     alias df='df -lh'
 

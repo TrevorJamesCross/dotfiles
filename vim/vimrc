@@ -188,13 +188,6 @@ let g:AutoPairsMapSpace = 1
 let g:AutoPairsMultilineClose = 1
 let g:AutoPairsFlyMode = 0
 
-" vim-surround configuration (uses default keybindings)
-" cs"' - change surrounding " to '
-" ds" - delete surrounding "
-" ysiw" - surround word with "
-" yss) - surround entire line with ()
-" S" in visual mode - surround selection with "
-
 " disable arrow keys in normal and insert modes
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -233,3 +226,47 @@ set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
 " better command completion
 set wildmenu
 set wildmode=longest:full,full
+
+" Greek letter mappings
+" lowercase versions
+digraph al 945    " α (alpha) 
+digraph be 946    " β (beta) 
+digraph ga 947    " γ (gamma)
+digraph de 948    " δ (delta)
+digraph ep 949    " ε (epsilon)
+digraph ze 950    " ζ (zeta)
+digraph et 951    " η (eta)
+digraph th 952    " θ (theta)
+digraph ka 954    " κ (kappa)
+digraph la 955    " λ (lambda)
+digraph mu 956    " μ (mu)
+digraph nu 957    " ν (nu)
+digraph xi 958    " ξ (xi)
+digraph pi 960    " π (pi)
+digraph rh 961    " ρ (rho)
+digraph si 963    " σ (sigma)
+digraph ta 964    " τ (tau)
+digraph ph 966    " φ (phi)
+digraph ch 967    " χ (chi)
+digraph ps 968    " ψ (psi)
+digraph om 969    " ω (omega)
+
+" uppercase versions
+digraph AL 913    " Α (Alpha)
+digraph BE 914    " Β (Beta)
+digraph GA 915    " Γ (Gamma)
+digraph DE 916    " Δ (Delta)
+digraph EP 917    " Ε (Epsilon)
+digraph ZE 918    " Ζ (Zeta)
+digraph TH 920    " Θ (Theta)
+digraph LA 923    " Λ (Lambda)
+digraph MU 924    " Μ (Mu)
+digraph NU 925    " Ν (Nu)
+digraph PI 928    " Π (Pi)
+digraph RH 929    " Ρ (Rho)
+digraph SI 931    " Σ (Sigma)
+digraph TA 932    " Τ (Tau)
+digraph PH 934    " Φ (Phi)
+digraph CH 935    " Χ (Chi)
+digraph PS 936    " Ψ (Psi)
+digraph OM 937    " Ω (Omega)
