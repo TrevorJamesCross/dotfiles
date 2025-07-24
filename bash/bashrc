@@ -87,6 +87,8 @@ else
 
     alias docker_update_images='sudo docker images --format {{.Repository}}:{{.Tag}} | xargs -L1 sudo docker pull'
 
+    alias df='df -lh'
+
 fi
 
 # export environment variables.
